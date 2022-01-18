@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+	<meta name="generator" content="Hugo 0.92.0" />
+    <meta charset="UTF-8">
+    <title>test</title>
+  </head>
+  <body>
+    <h1>test</h1>
+    <p>これはテストです。</p>
+    <script>
+      var shadowRoot = document.body.attachShadow({mode: "closed"});
+      shadowRoot.innerHTML = `
+        <p>これはShadowRootの中身です。</p>
+        <a href="https://www.google.com/">Googleへのリンクです</a>
+      `
+    </script>
+  </body>
+</html>
