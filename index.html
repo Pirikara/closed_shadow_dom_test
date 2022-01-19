@@ -8,11 +8,23 @@
   <body>
     <h1>test</h1>
     <p>これはテストです。</p>
+    <div>
+      <label for="name1">text in label-tag</label>
+      <input type="text" id="name1">
+    </div>
+    <div id="shadow" class="shadow"></div>
     <script>
       var shadowRoot = document.body.attachShadow({mode: "closed"});
       shadowRoot.innerHTML = `
         <p>これはShadowRootの中身です。</p>
         <a href="https://www.google.com/">Googleへのリンクです</a>
+      `
+      var element = document.getElementById("shadow");
+      var shadowRoot2 = element.attachShadow({mode: "open"});
+      shadowRoot2.innerHTML = `
+      <div class="shadow-button">
+        <button class="hoge" id="name1">Shadow Button</button>  
+      </div>
       `
     </script>
   </body>
